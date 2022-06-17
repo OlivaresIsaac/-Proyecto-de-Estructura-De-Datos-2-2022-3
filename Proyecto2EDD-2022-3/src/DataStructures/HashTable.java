@@ -3,22 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main;
-
-import UI.GlobalUI;
+package DataStructures;
 
 /**
  *
  * @author isaac
  */
-public class Main {
-
-    /**
-     * Main method
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        GlobalUI.openMainPage();
-    }
+public class HashTable {
     
 }
