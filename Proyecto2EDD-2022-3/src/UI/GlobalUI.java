@@ -16,6 +16,9 @@ import javax.swing.JOptionPane;
 public class GlobalUI {
 
     private static final MainPage mainPage = new MainPage();
+    private static final SearchArticlePage searchArticlePage = new SearchArticlePage();
+    private static final AnalyzeArticlePage analyzeArticlePage = new AnalyzeArticlePage();
+
     private static final HashTable articleHT = new HashTable();
 
     /**
@@ -23,6 +26,24 @@ public class GlobalUI {
      */
     public static void openMainPage() {
         getMainPage().setVisible(true);
+        getAnalyzeArticlePage().setVisible(false);
+        getSearchArticlePage().setVisible(false);
+    }
+
+    /**
+     * Opens SearchArticlePage
+     */
+    public static void openSearchArticlePage() {
+        getSearchArticlePage().setVisible(true);
+        getMainPage().setVisible(false);
+    }
+
+    /**
+     * Opens AnalyzeArticlePage
+     */
+    public static void openAnalyzeArticlePage() {
+        getAnalyzeArticlePage().setVisible(true);
+        getMainPage().setVisible(false);
     }
 
     /**
@@ -44,16 +65,34 @@ public class GlobalUI {
     }
 
     /**
-     * Adds given article to HT, validates and informs
-     * if the article was already in DB
-     * 
+     * Getter for SearchArticlePage
+     *
+     * @return searchArticlePage
+     */
+    public static SearchArticlePage getSearchArticlePage() {
+        return searchArticlePage;
+    }
+
+    /**
+     * Getter for AnalyzeArticlePage
+     *
+     * @return analyzeArticlePage
+     */
+    public static AnalyzeArticlePage getAnalyzeArticlePage() {
+        return analyzeArticlePage;
+    }
+
+    /**
+     * Adds given article to HT, validates and informs if the article was
+     * already in DB
+     *
      * @param article
      */
     public static void addArticleToHT(Article article) {
         if (getArticleHT().addArticle(article)) {
-            JOptionPane.showMessageDialog(null, "El artículo: '" +article.getTitle()+"' fue cargado con éxito!", "Proceso éxitoso", 1);
+            JOptionPane.showMessageDialog(null, "El artículo: '" + article.getTitle() + "' fue cargado con éxito!", "Proceso éxitoso", 1);
         } else {
-            JOptionPane.showMessageDialog(null, "El artículo: '" +article.getTitle()+"' ya existe en la base de datos", "Advertencia", 0);
+            JOptionPane.showMessageDialog(null, "El artículo: '" + article.getTitle() + "' ya existe en la base de datos", "Advertencia", 0);
         }
 
     }

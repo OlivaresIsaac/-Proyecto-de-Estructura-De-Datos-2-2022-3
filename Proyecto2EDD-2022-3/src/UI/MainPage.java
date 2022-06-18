@@ -66,9 +66,19 @@ public class MainPage extends javax.swing.JFrame {
         jPanel1.add(addArticleButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 180, 140));
 
         openAnalyzePageButton.setText("Analizar Resumen");
+        openAnalyzePageButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                openAnalyzePageButtonActionPerformed(evt);
+            }
+        });
         jPanel1.add(openAnalyzePageButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 180, 180, 140));
 
         openSearchPageButton.setText("Buscar Investigación");
+        openSearchPageButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                openSearchPageButtonActionPerformed(evt);
+            }
+        });
         jPanel1.add(openSearchPageButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 180, 140));
 
         testHT.setText("test HT");
@@ -94,6 +104,14 @@ public class MainPage extends javax.swing.JFrame {
     private void testHTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testHTActionPerformed
         GlobalUI.getArticleHT().printAllArticlesConsole();
     }//GEN-LAST:event_testHTActionPerformed
+
+    private void openSearchPageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openSearchPageButtonActionPerformed
+        GlobalUI.openSearchArticlePage();
+    }//GEN-LAST:event_openSearchPageButtonActionPerformed
+
+    private void openAnalyzePageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openAnalyzePageButtonActionPerformed
+        GlobalUI.openAnalyzeArticlePage();
+    }//GEN-LAST:event_openAnalyzePageButtonActionPerformed
 
     /**
      * @param args the command line arguments
