@@ -51,7 +51,8 @@ public class Article {
 
             pointer = pointer.getNext();
         }
-        info += "\n" + "Resumen: " + getBody() + "\n" + "Palabras clave: ";
+//        info += "\n" + "Resumen: " + getBody() + "\n" + "Palabras clave: ";
+        info +=  "\n" + "Palabras clave: ";
 
         Node temp = getKeyWords().getHead();
         while (temp != null) {

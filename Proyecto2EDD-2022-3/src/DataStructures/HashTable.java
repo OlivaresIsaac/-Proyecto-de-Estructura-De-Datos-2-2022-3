@@ -95,6 +95,28 @@ public class HashTable {
     }
 
     /**
+     * Search article in HT by title return null if not found
+     *
+     * @param title
+     * @return Article
+     */
+    public Article searchArticleByTitle(String title) {
+        Article article= null;
+        //all hashing must be in loweCase
+        int index = hashString(title.toLowerCase());
+        LinkedList articlesInIndex = getTable()[index];
+        Node pointer = articlesInIndex.getHead();
+        while (pointer != null) {
+            if ((title.toLowerCase()).equals( ((Article) pointer.getElement()).getTitle().toLowerCase() )) {
+                article = ((Article)pointer.getElement());
+            }
+            pointer = pointer.getNext();
+        }
+        
+        return article;
+    }
+
+    /**
      * Getter for table
      *
      * @return table
