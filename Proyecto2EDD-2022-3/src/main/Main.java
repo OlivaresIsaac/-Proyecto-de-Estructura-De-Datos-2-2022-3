@@ -24,6 +24,8 @@ public class Main {
         GlobalUI.openMainPage();
         FunctionsTXT.loadExistingArticlesInDB();
 //        testHash();
+        System.out.println("si sirve");
+
     }
 
     public static void testHash() {
