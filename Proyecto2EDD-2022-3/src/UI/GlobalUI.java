@@ -34,6 +34,7 @@ public class GlobalUI {
      * Opens SearchArticlePage
      */
     public static void openSearchArticlePage() {
+        getSearchArticlePage().getTitleSearchTextField().setText("");
         getSearchArticlePage().setVisible(true);
         getMainPage().setVisible(false);
     }
