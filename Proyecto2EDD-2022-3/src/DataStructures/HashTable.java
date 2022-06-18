@@ -80,7 +80,9 @@ public class HashTable {
      * @return boolean
      */
     public boolean addArticle(Article articleToAdd) {
-        int index = hashString(articleToAdd.getTitle());
+        // the str given for hashing is the title in lowerCase 
+        // this makes the search made by the user easier
+        int index = hashString(articleToAdd.getTitle().toLowerCase());
         boolean isTitleInList = getTable()[index].isTitleInList(articleToAdd.getTitle());
 
         if (isTitleInList) {

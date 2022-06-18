@@ -30,12 +30,54 @@ public class MainPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        title = new javax.swing.JLabel();
+        logo = new javax.swing.JLabel();
+        addArticleButton = new javax.swing.JButton();
+        openAnalyzePageButton = new javax.swing.JButton();
+        openSearchPageButton = new javax.swing.JButton();
+        testHT = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBackground(new java.awt.Color(255, 153, 153));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        title.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        title.setForeground(new java.awt.Color(0, 0, 0));
+        title.setText("MetroMendeley: Repositorio Científico");
+        jPanel2.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
+
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/logo.png"))); // NOI18N
+        jPanel2.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, -1, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 70));
+
+        addArticleButton.setText("Agregar Resumen");
+        addArticleButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addArticleButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(addArticleButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 180, 140));
+
+        openAnalyzePageButton.setText("Analizar Resumen");
+        jPanel1.add(openAnalyzePageButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 180, 180, 140));
+
+        openSearchPageButton.setText("Buscar Investigación");
+        jPanel1.add(openSearchPageButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 180, 140));
+
+        testHT.setText("test HT");
+        testHT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                testHTActionPerformed(evt);
+            }
+        });
+        jPanel1.add(testHT, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 440, -1, -1));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/output-onlinepngtools.png"))); // NOI18N
         jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-670, -130, -1, -1));
@@ -44,6 +86,14 @@ public class MainPage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void addArticleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addArticleButtonActionPerformed
+        FunctionsUI.openJFileChooser();
+    }//GEN-LAST:event_addArticleButtonActionPerformed
+
+    private void testHTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testHTActionPerformed
+        GlobalUI.getArticleHT().printAllArticlesConsole();
+    }//GEN-LAST:event_testHTActionPerformed
 
     /**
      * @param args the command line arguments
@@ -81,7 +131,14 @@ public class MainPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addArticleButton;
     private javax.swing.JLabel background;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel logo;
+    private javax.swing.JButton openAnalyzePageButton;
+    private javax.swing.JButton openSearchPageButton;
+    private javax.swing.JButton testHT;
+    private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }

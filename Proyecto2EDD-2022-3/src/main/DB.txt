@@ -21,6 +21,7 @@ de las fundaciones directas, implementa el método de Terzaghi y Vesic. Igualmen
 modelo de cálculo para el diseño de todas las fundaciones de la estructura, el cual fue implementado en
 el complemento obtenido en este trabajo de investigación.
 Palabras claves: fundaciones directas, AutoCAD, complemento, C#
+/
 Arquitectura referencial para mecanismos de
 Internacionalización y localización en PHP.
 Autores
@@ -55,6 +56,7 @@ momento de seleccionar la alternativa arquitectónica más robusta al considerar
 desarrollo.
 Palabras Claves: análisis de dominio, ingeniería de dominio, PHP, arquitectura referencial,
 internacionalización y localización.
+/
 Sistema de diseño basado en Grid
 Autores
 José Invernón
@@ -86,6 +88,7 @@ usuario solo con la propiedad Grid, como se demostró en este trabajo, su combin
 potencia la creación tanto de componentes como de aplicaciones debido a que con el primero, se define
 la estructura y con el segundo, se distribuye el contenido en cada sección.
 Palabras claves: diseño, componentes, sistema de diseño, Grid, hojas de estilo, UX/UI.
+/
 GraphQL vs REST: una comparación desde la perspectiva
 de eficiencia de desempeño.
 Autores
@@ -122,3 +125,4 @@ que la API maneja están estrechamente relacionados y cuando no sea necesario ut
 información obtenida. Por otra parte, REST debería utilizarse en caso de necesitarse mayor velocidad de
 respuesta y cuando se requiera utilizar la totalidad de la información de los recursos manejados.
 Palabras Claves: REST, GraphQL, cliente-servidor, mecanismo arquitectónico, calidad de software.
+/

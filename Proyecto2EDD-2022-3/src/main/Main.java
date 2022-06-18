@@ -6,7 +6,6 @@
 package main;
 
 import Classes.Article;
-import DataStructures.HashTable;
 import DataStructures.LinkedList;
 import UI.GlobalUI;
 
@@ -23,11 +22,12 @@ public class Main {
      */
     public static void main(String[] args) {
         GlobalUI.openMainPage();
-        testHash();
+        FunctionsTXT.loadExistingArticlesInDB();
+//        testHash();
     }
 
     public static void testHash() {
-        HashTable articleTable = new HashTable();
+        
 
         for (int i = 0; i < 20; i++) {
             LinkedList authors = new LinkedList();
@@ -45,10 +45,10 @@ public class Main {
 
             Article art = new Article(title, authors, body, keyWord);
 
-            articleTable.addArticle(art);
+            GlobalUI.getArticleHT().addArticle(art);
         }
-
-        articleTable.printAllArticlesConsole();
+        
+        GlobalUI.getArticleHT().printAllArticlesConsole();
 
     }
 
