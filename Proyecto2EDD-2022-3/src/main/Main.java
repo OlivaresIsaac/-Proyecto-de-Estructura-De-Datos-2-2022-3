@@ -5,6 +5,9 @@
  */
 package main;
 
+import Classes.Article;
+import DataStructures.HashTable;
+import DataStructures.LinkedList;
 import UI.GlobalUI;
 
 /**
@@ -15,10 +18,38 @@ public class Main {
 
     /**
      * Main method
+     *
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         GlobalUI.openMainPage();
+        testHash();
     }
-    
+
+    public static void testHash() {
+        HashTable articleTable = new HashTable();
+
+        for (int i = 0; i < 20; i++) {
+            LinkedList authors = new LinkedList();
+            authors.addEnd("Autor" + i + ".1");
+            authors.addEnd("Autor" + i + ".2");
+            authors.addEnd("Autor" + i + ".3");
+
+            LinkedList keyWord = new LinkedList();
+            keyWord.addEnd("Palabra" + i + ".1");
+            keyWord.addEnd("Palabra" + i + ".2");
+            keyWord.addEnd("Palabra" + i + ".3");
+
+            String title = "Artículo " + i;
+            String body = "Resumen" + i;
+
+            Article art = new Article(title, authors, body, keyWord);
+
+            articleTable.addArticle(art);
+        }
+
+        articleTable.printAllArticlesConsole();
+
+    }
+
 }

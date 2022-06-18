@@ -5,6 +5,8 @@
  */
 package DataStructures;
 
+import Classes.Article;
+
 /**
  *
  * @author isaac
@@ -271,7 +273,7 @@ public class LinkedList {
      * Checks if the given object is currently inside the list
      *
      * @param element
-     * @return Node
+     * @return boolean
      */
     public boolean isObjectInList(Object element) {
         Node pointer = getHead();
@@ -284,6 +286,23 @@ public class LinkedList {
             pointer = pointer.getNext();
         }
         return found;
+    }
+
+    /**
+     * Checks if the given article title is currently inside the list
+     *
+     * @param title
+     * @return boolean
+     */
+    public boolean isTitleInList(String title) {
+        Node pointer = getHead();
+        while (pointer != null) {
+            if (((Article) pointer.getElement()).getTitle().equals(title)) {
+                return true;
+            }
+            pointer = pointer.getNext();
+        }
+        return false;
     }
 
     /**
