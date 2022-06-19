@@ -45,6 +45,7 @@ public class FunctionsTXT {
 
                 if (isTxtFormatValid(txt)) {
                     GlobalUI.addArticleToHT(convertStrToArticle(txt));
+                    GlobalUI.addArticleToList(convertStrToArticle(txt));
                 } else {
                     JOptionPane.showMessageDialog(null, "El archivo seleccionado no tiene el formato correcto, por favor intentar de nuevo", "Advertencia", 2);
                 }

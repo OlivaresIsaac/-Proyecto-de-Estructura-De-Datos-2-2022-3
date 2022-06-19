@@ -8,6 +8,7 @@ package UI;
 import Classes.Article;
 import DataStructures.HashTable;
 import javax.swing.JOptionPane;
+import DataStructures.LinkedList;
 
 /**
  *
@@ -20,6 +21,8 @@ public class GlobalUI {
     private static final AnalyzeArticlePage analyzeArticlePage = new AnalyzeArticlePage();
 
     private static final HashTable articleHT = new HashTable();
+    private static final LinkedList articleList = new LinkedList();
+    
 
     /**
      * Opens proyect MainPage
@@ -98,4 +101,25 @@ public class GlobalUI {
 
     }
 
+    /**
+     * Getter for LinkedList
+     *
+     * @return articleList
+     */
+    public static LinkedList getArticleList() {
+        return articleList;
+    }
+    
+    /**
+     * Adds given article title to a list, validates and informs if the article was
+     * already in the list 
+     *
+     * @param article
+     */
+    public static void addArticleToList(Article article) {
+        if (getArticleHT().addArticle(article)) {
+            getArticleList().addEnd(article.getTitle());
+        } 
+    }
+    
 }
